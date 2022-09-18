@@ -7,7 +7,7 @@ const gameOverSound = new Audio('soundeffect/gameover.wav');
 const moveSound = new Audio('soundeffect/move.wav');
 const musicSound = new Audio('soundeffect/backgroundmusic.wav');
 
-let speed = 6;
+let speed = 8;
 let score= 0;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -18,7 +18,7 @@ food = { x: 6, y: 7 };
 // Game function
 function main(ctime) {
   window.requestAnimationFrame(main);
-  //  console.log(ctime);
+   console.log(ctime);
   if ((ctime - lastPaintTime) / 1000 < 1 / speed) {
     return;
   }
@@ -100,20 +100,8 @@ function gameEngine() {
 
 main();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // main logic starts here
+
 musicSound.play();
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e => {
